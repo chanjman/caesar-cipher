@@ -1,8 +1,6 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    autoprefixer-rails (6.7.7.1)
-      execjs
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -42,7 +40,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autoprefixer-rails
   coffee-script
   font-awesome-sass
   rack-coffee

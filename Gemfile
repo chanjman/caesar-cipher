@@ -1,6 +1,5 @@
 source :rubygems
 
-gem 'autoprefixer-rails'
 gem 'coffee-script'
 gem 'font-awesome-sass'
 gem 'rack-coffee'
