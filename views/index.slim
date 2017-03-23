@@ -1,0 +1,27 @@
+h1.title Caesar Cipher
+p.howto <span>Enter text</span> to encrypt/decrypt --> <span>Choose shift</span> amount --> <span>Click</span> encrypt/decrypt
+
+main.codearea
+
+  section.text-input
+      textarea#encrypt name='cipher' rows='10' cols='30' placeholder='Enter text to encrypt'
+
+  section.controls
+
+    .controls__shift
+      label.controls__shift__label for='key' Shift
+      
+      select#shift.controls__shift__select name='key'
+        - 1.upto(26) do |i|
+          option value='#{i}' #{i}
+
+    .controls__submit
+      button#encrypt-submit.controls__btn.controls__btn--encrypt type='button' data-m='encrypt' data-opm='decrypt'
+        | Encrypt
+        i.fa.fa-arrow-right
+      button#decrypt-submit.controls__btn.controls__btn--decrypt type='button' data-m='decrypt' data-opm='encrypt'
+        i.fa.fa-arrow-left
+        | Decrypt
+
+  section.text-input
+      textarea#decrypt name='cipher' rows='10' cols='30' placeholder='Enter text to decrypt'

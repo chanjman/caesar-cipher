@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Caesar Cipher
+    meta[charset="UTF-8"]
+    link rel='icon' href='favicon.ico'
+    link rel='stylesheet' type='text/css' href=url('/assets/style.css')
+    link rel='stylesheet' type='text/css' href=url('/assets/normalize.css')
+    script src="https://use.fontawesome.com/2be2a1d5d1.js"  
+    link[href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet" type="text/css"]
+  body
+    == yield
+
+    /! Scripts  
+    script[src="https://code.jquery.com/jquery-3.2.1.min.js"
+           integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+           crossorigin="anonymous"]
+    script[src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+           integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+           crossorigin="anonymous"]
+    script type="text/javascript" src=url('assets/scripts.js')
