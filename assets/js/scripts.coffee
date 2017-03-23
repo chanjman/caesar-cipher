@@ -1,6 +1,5 @@
 $ ->
   submitForm = (method, opMethod) ->
-    console.log ($("##{opMethod}").removeAttr('placeholder'))
     $("##{opMethod}").val('')
 
     key = $('#shift :selected').text()
