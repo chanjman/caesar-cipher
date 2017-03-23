@@ -9,7 +9,7 @@ $ ->
       type: 'POST'
       data: { 'cipher': cipher, 'key': key }
       success: (data) ->
-        $("##{opMethod}").val(data).effect('highlight', color: '#2ecc71')
+        $("##{opMethod}").val(data)
 
   $('#encrypt-submit').click (event) ->
     event.preventDefault()
