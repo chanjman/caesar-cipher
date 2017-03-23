@@ -5,6 +5,7 @@ require 'uglifier'
 require 'sass'
 require 'coffee-script'
 require 'execjs'
+require 'autoprefixer-rails'
 require_relative 'models/caesar_cipher'
 
 class ApplicationController < Sinatra::Base
@@ -24,6 +25,8 @@ class ApplicationController < Sinatra::Base
     env['PATH_INFO'].sub!('/assets', '')
     settings.environment.call(env)
   end
+
+  AutoprefixerRails.install(environment)
 
   # routes
   get '/' do
