@@ -94,10 +94,22 @@ body
   margin: 2rem
   border-radius: 0.25rem
   border: 1px lightgrey solid
-  width: 33rem
-  height: 10.6rem
+  width: 32rem
+  min-height: 10.6rem
   box-sizing: content-box
+  position: relative
+
+.output__text
+  margin: 0
 
 @media screen and (max-width: 600px)
   .output
     width: 80%
+
+.output i
+  font-size: 10rem
+  color: #bdc3c7
+  position: absolute
+  left: calc(50% - 50px)
+  top: calc(50% - 80px)
+  z-index: -1

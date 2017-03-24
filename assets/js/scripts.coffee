@@ -7,8 +7,16 @@ $ ->
       type: 'POST'
       data: { 'cipher': cipher, 'key': key }
       success: (data) ->
-        $('#output').css('display', 'inline-block').text(data)
-        $('html,body').animate({scrollTop: $('#output').offset().top}, 2000)
+        $('#output').fadeIn()
+
+        $('#output p').text(data)
+
+        if method == 'encrypt'
+          $('#output i').replaceWith("<i class='fa fa-lock output__icon'></i>")
+        else
+          $('#output i').replaceWith("<i class='fa fa-unlock output__icon'></i>")
+
+        $('html,body').animate({scrollTop: $('#output').offset().top}, 1000)
 
   $('#encrypt-submit').click (event) ->
     event.preventDefault()
