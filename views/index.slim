@@ -1,5 +1,7 @@
 h1.title Caesar Cipher
-p.howto <span>Enter text</span> to encrypt/decrypt --> <span>Choose shift</span> amount --> <span>Click</span> encrypt/decrypt
+p.howto <span>Enter text</span> to encrypt/decrypt<br>
+        <span>Choose key</span><br>
+        <span>Click</span> encrypt/decrypt
 
 main.codearea
 
@@ -9,7 +11,7 @@ main.codearea
   section.controls
 
     .controls__shift
-      label.controls__shift__label for='key' Shift
+      label.controls__shift__label for='key' Key
       
       select#shift.controls__shift__select name='key'
         - 1.upto(26) do |i|
