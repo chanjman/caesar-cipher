@@ -1,24 +1,22 @@
 $ ->
-  submitForm = (method, opMethod) ->
-    $("##{opMethod}").val('')
-
+  submitForm = (method) ->
     key = $('#shift :selected').text()
-    cipher = $("##{method}").val()
+    cipher = $('#encrypt').val()
+
+    $('#encrypt').val('')
 
     $.ajax "/#{method}",
       type: 'POST'
       data: { 'cipher': cipher, 'key': key }
       success: (data) ->
-        $("##{opMethod}").val(data)
+        $('#encrypt').val(data)
 
   $('#encrypt-submit').click (event) ->
     event.preventDefault()
-    method = $(this).attr('data-m')
-    opMethod = $(this).attr('data-opm')
-    submitForm(method, opMethod)
+    method = $(this).attr('data')
+    submitForm(method)
 
   $('#decrypt-submit').click (event) ->
     event.preventDefault()
-    method = $(this).attr('data-m')
-    opMethod = $(this).attr('data-opm')
-    submitForm(method, opMethod)
+    method = $(this).attr('data')
+    submitForm(method)
