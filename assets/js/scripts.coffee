@@ -3,8 +3,6 @@ $ ->
     key = $('#shift :selected').text()
     cipher = $('#encrypt').val()
 
-    $('#encrypt').val('')
-
     $.ajax "/#{method}",
       type: 'POST'
       data: { 'cipher': cipher, 'key': key }
