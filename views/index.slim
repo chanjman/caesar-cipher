@@ -4,7 +4,7 @@ p.howto <span>Enter text</span> to encrypt/decrypt --> <span>Choose shift</span>
 main.codearea
 
   section.text-input
-      textarea#encrypt name='cipher' rows='10' cols='30' placeholder='Enter text to encrypt'
+      textarea#encrypt name='cipher' rows='10' cols='60' placeholder='Enter text to encrypt/decrypt'
 
   section.controls
 
@@ -15,13 +15,11 @@ main.codearea
         - 1.upto(26) do |i|
           option value='#{i}' #{i}
 
-    .controls__submit
+    .controls__button__container
       button#encrypt-submit.controls__btn.controls__btn--encrypt type='button' data-m='encrypt' data-opm='decrypt'
         i.fa.fa-lock
         | Encrypt
+        
       button#decrypt-submit.controls__btn.controls__btn--decrypt type='button' data-m='decrypt' data-opm='encrypt'
         i.fa.fa-unlock
         | Decrypt
-
-  section.text-input
-      textarea#decrypt name='cipher' rows='10' cols='30' placeholder='Enter text to decrypt'
