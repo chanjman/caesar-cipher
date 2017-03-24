@@ -30,6 +30,9 @@ class ApplicationController < Sinatra::Base
     slim :index
   end
 
+  get '/favicon.ico' do
+  end
+
   post '/encrypt' do
     cipher = params[:cipher]
     shift = params[:key].to_i
