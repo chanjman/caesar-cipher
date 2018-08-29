@@ -1,6 +1,6 @@
 # Caesar cipher
 
-This is a simple Sinatra application which you can use to encrypt or decrypt a piece of text. [Demo](https://ca3sar-ciph3r.herokuapp.com)
+This is a simple Sinatra application which you can use to encrypt or decrypt a piece of text. [Demo](https://ca3sar-ciph3r.mariozugaj.com)
 
 ##### What is Caesar cipher?
 
